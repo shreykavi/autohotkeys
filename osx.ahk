@@ -60,8 +60,14 @@ CapsLock::
 !Backspace::
     Send ^+{Left}{Backspace}
     Return
+!Del::
+    Send ^+{Right}{Backspace}
+    Return
 
 ; Delete line
 ^Backspace::
-    Send {Home}{Home}{ShiftDown}{End}{Right}{ShiftUp}{Del}
+    Send {ShiftDown}{Home}{ShiftUp}{Del}
+    Return
+^Del::
+    Send {ShiftDown}{End}{ShiftUp}{Del}
     Return
